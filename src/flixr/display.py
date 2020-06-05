@@ -90,13 +90,15 @@ def formatted(show):
 
     # creators
     creators = list(map(lambda x: bold(color(x, gradient[2])), show["creators"]))
-    if len(creators) == 1:
-        creators = creators[0]
-    elif len(creators) == 2:
-        creators = " & ".join(creators)
-    else:
-        creators = " & ".join([", ".join(creators[:-1]), creators[-1]])
-    output.append(f"Created by {creators}")
+    
+    if len(creators) > 0:
+        if len(creators) == 1:
+            creators = creators[0]
+        elif len(creators) == 2:
+            creators = " & ".join(creators)
+        else:
+            creators = " & ".join([", ".join(creators[:-1]), creators[-1]])
+        output.append(f"Created by {creators}")
 
     # Cast
     cast = list(map(lambda x: bold(color(x, gradient[2])), show["cast"]))
