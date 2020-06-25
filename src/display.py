@@ -90,7 +90,7 @@ def formatted(show):
 
     # creators
     creators = list(map(lambda x: bold(color(x, gradient[2])), show["creators"]))
-    
+
     if len(creators) > 0:
         if len(creators) == 1:
             creators = creators[0]

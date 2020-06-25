@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="flixr",
-    version="0.0.1",
+    version="0.0.2",
     description="A command line utility for television show information.",
     long_description=long_description,
     long_description_content_type="text/markdown",
@@ -20,8 +20,8 @@ setup(
         "Operating System :: OS Independent",
     ],
     python_requires=">=3.6",
-    packages=find_packages("src"),
-    package_dir={"": "src"},
+    packages=["flixr"],
+    package_dir={"flixr": "src"},
     install_requires=["sty",],
     entry_points={"console_scripts": ["flixr = flixr.__main__:main",]},
 )
